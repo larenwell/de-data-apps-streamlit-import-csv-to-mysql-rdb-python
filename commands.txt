@@ -1,0 +1,13 @@
+
+
+
+
+!pip install -r requirements.txt
+
+python main.py
+
+mysql -u root -proot -h localhost -P 3306 db_candidates
+
+select*from db_candidates.tb_hired_report limit 5;
+
+streamlit run app.py
