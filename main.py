@@ -1,5 +1,5 @@
 import pandas as pd
-from connection.sql_connection import create_server_connection,execute_query,read_table,execute_list_tuples_query
+from connection.sql_utils import create_server_connection,execute_query,read_table,execute_list_tuples_query
 from connection.config import dic_tables_config
 from connection.config import CREATE_CANDIDATE_DATABASE,CREATE_CANDIDATES_TABLE,SQL_INSERT_CANDIDATE_TABLE,CREATE_REPORT_TABLE
 
@@ -21,15 +21,15 @@ def setup_db():
     execute_query(connection, CREATE_REPORT_TABLE)
 
 
-#def query_db(query):
-#    connection = create_server_connection(database=True)
-#    query = f"SELECT*FROM {dic_tables_config['table_candidates']}"
-#    read_table(connection, query)
+def query_db():
+    connection = create_server_connection(database=True)
+    query = f'SELECT*FROM {dic_tables_config["table_report"]} where status_candidate="Hired"'
+    return read_table(connection, query)
 
 
 if __name__ == "__main__":
-    
     setup_db()
+    print(query_db())
     
 
 

@@ -44,11 +44,6 @@ case
 when code_challenge_score>=7 and technical_interview_score>=7 THEN 'Hired'
 else 'No Hired'
 END
-AS status_cantidate,
-COUNT(first_name) AS number_of_hired
+AS status_candidate
 FROM db_candidates.tb_candidates
-GROUP BY
-technology, seniority, country,
-year_application,
-status_cantidate;
 '''
