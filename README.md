@@ -1,2 +1,3 @@
 # de-data-apps-streamlit-import-csv-to-mysql-rdb-python
-Projecto que permite crear y almacenar datos a una base de datos en MySQL desde un archivo de extensión csv empleando python. Así mismo se emplea Streamlit para desplegar una aplicación que contiene gráficos de visualización.
+
+Project that allows you to create and store data in a MySQL database from a csv extension file using python. Likewise, Streamlit is used to deploy an application that contains visualization graphics.
